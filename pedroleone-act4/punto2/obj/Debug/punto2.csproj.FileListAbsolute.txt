@@ -1,0 +1,7 @@
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\bin\Debug\punto2.exe.config
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\bin\Debug\punto2.exe
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\bin\Debug\punto2.pdb
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\obj\Debug\punto2.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\obj\Debug\punto2.csproj.CoreCompileInputs.cache
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\obj\Debug\punto2.exe
+C:\Users\Administrator\source\repos\pedroleone-act4\punto2\obj\Debug\punto2.pdb
