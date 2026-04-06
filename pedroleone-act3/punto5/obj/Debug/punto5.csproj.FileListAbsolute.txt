@@ -1,0 +1,2 @@
+C:\Users\Administrator\source\repos\pedroleone-act3\punto5\obj\Debug\punto5.csproj.AssemblyReference.cache
+C:\Users\Administrator\source\repos\pedroleone-act3\punto5\obj\Debug\punto5.csproj.CoreCompileInputs.cache
