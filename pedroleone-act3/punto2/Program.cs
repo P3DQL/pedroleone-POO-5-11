@@ -4,6 +4,7 @@ class Program
 {
     static void Main()
     {
+        //2. Se ingresan tres valores por teclado, si todos son iguales se imprime la suma del primero con el segundo y a este resultado se lo multiplica por el tercero.
         int num1, num2, num3;
 
         Console.Write("Ingrese el primer número: ");
