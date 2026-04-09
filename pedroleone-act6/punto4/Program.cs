@@ -3,7 +3,10 @@
 class Operaciones
 {
     private int num1, num2;
-
+/*4. Implementar la clase operaciones. Se deben cargar dos valores enteros,
+    calcular su suma, resta, multiplicación y división, cada una en un método,
+    imprimir dichos resultados.
+*/
     public void Cargar()
     {
         Console.Write("Ingrese el primer número: ");
