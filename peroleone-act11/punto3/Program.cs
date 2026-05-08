@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Ejercicio3
+namespace punto2
 {
-    class Empresa
+    class Program
     {
         /*3. Confeccionar una clase para administrar los días que han faltado los 3 empleados de una
              empresa.
@@ -57,17 +57,14 @@ namespace Ejercicio3
             Console.WriteLine("Empleado con menos faltas: " + empleados[pos]);
         }
     }
-    class Program
-    {
         static void Main(string[] args)
         {
-            Empresa e = new Empresa();
+            Program p = new Program();
 
-            e.Cargar();
-            e.MostrarInasistencias();
-            e.EmpleadoMenosFaltas();
+            p.Cargar();
+            p.MostrarInasistencias();
+            p.EmpleadoMenosFaltas();
 
             Console.ReadKey();
         }
-    }
 }
