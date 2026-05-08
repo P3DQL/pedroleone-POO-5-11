@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace Ejercicio1
+namespace Punto1
 {
-    class Temperaturas
+    class Program
     {
         /*1. Se desea saber la temperatura media trimestral de cuatro paises. Para ello se tiene como
         dato las temperaturas medias mensuales de dichos paises.
@@ -94,19 +94,16 @@ namespace Ejercicio1
         }
     }
 
-    class Program
-    {
         static void Main(string[] args)
         {
-            Temperaturas t = new Temperaturas();
+            Program p = new Program();
 
-            t.Cargar();
-            t.Mostrar();
-            t.CalcularPromedios();
-            t.MostrarPromedios();
-            t.MayorPromedio();
+            p.Cargar();
+            p.Mostrar();
+            p.CalcularPromedios();
+            p.MostrarPromedios();
+            p.MayorPromedio();
 
             Console.ReadKey();
         }
-    }
 }
