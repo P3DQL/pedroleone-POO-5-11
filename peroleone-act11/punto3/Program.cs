@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace punto2
+namespace punto3
 {
     class Program
     {
