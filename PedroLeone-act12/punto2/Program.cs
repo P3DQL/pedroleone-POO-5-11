@@ -1,5 +1,5 @@
-﻿using System;
-namespace Ejercicio2
+using System;
+namespace punto2
 {
     class Program
     {
@@ -18,8 +18,8 @@ namespace Ejercicio2
             5. Informar cuál es el promedio de edad de los espectadores de todo el
             complejo.
         */
-        static int[][] salas;
-        static void Crear()
+        public int[][] salas;
+        public void Crear()
         {
             salas = new int[4][];
 
@@ -28,7 +28,7 @@ namespace Ejercicio2
             salas[2] = new int[8];
             salas[3] = new int[12];
         }
-        static void VentaEntrada()
+        public void VentaEntrada()
         {
             int sala, asiento, edad;
 
@@ -43,7 +43,7 @@ namespace Ejercicio2
 
             salas[sala][asiento] = edad;
         }
-        static void Mostrar()
+        public void Mostrar()
         {
             for (int i = 0; i < salas.Length; i++)
             {
@@ -55,7 +55,7 @@ namespace Ejercicio2
                 Console.WriteLine();
             }
         }
-        static void MenoresEdad()
+        public void MenoresEdad()
         {
             for (int i = 0; i < salas.Length; i++)
             {
@@ -70,7 +70,7 @@ namespace Ejercicio2
                 Console.WriteLine("Menores en sala " + (i + 1) + ": " + menores);
             }
         }
-        static void PromedioEdades()
+        public void PromedioEdades()
         {
             int suma = 0;
             int cantidad = 0;
@@ -88,9 +88,9 @@ namespace Ejercicio2
             int promedio = suma / cantidad;
             Console.WriteLine("Promedio de edades: " + promedio);
         }
-        static void Main(string[] args)
+        public void Main(string[] args)
         {
-            Program p n = new Program();
+            Program p = new Program();
             p.Crear();
             p.VentaEntrada();
             p.Mostrar();
