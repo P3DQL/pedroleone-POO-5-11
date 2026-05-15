@@ -38,7 +38,7 @@ namespace Ejercicio1
         }
         static void Main(string[] args)
         {
-            Program m = new Program();
+            Program p = new Program();
             p.Cargar();
             p.Mostrar();
             Console.ReadKey();
