@@ -18,8 +18,8 @@ namespace punto2
             5. Informar cuál es el promedio de edad de los espectadores de todo el
             complejo.
         */
-        public int[][] salas;
-        public void Crear()
+        private int[][] salas;
+        private void Crear()
         {
             salas = new int[4][];
 
