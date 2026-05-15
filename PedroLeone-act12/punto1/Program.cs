@@ -19,8 +19,8 @@ namespace punto1
      */
     class Program
     {
-        public string[] sucursales = new string[3];
-        public int[][] paquetes = new int[3][];
+        private string[] sucursales = new string[3];
+        private int[][] paquetes = new int[3][];
 
         public void Cargar()
         {
