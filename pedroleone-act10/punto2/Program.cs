@@ -2,7 +2,7 @@
 
 namespace Ejercicio2
 {
-    class Matriz
+    class Program
     {
         /*2- Crear una matriz de n * m filas (cargar n y m por teclado) Intercambiar la
             primer fila con la segunda. Imprimir luego la matriz.
@@ -53,16 +53,13 @@ namespace Ejercicio2
                 Console.WriteLine();
             }
         }
-    }
 
-    class Program
-    {
         static void Main(string[] args)
         {
-            Matriz m = new Matriz();
-            m.Cargar();
-            m.IntercambiarFilas();
-            m.Mostrar();
+            Program p = new Program();
+            p.Cargar();
+            p.IntercambiarFilas();
+            p.Mostrar();
             Console.ReadKey();
         }
     }
