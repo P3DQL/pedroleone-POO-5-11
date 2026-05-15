@@ -2,7 +2,7 @@
 
 namespace Ejercicio1
 {
-    class Matriz
+    class Program
     {
         /*1- Crear una matriz de 2 filas y 5 columnas. Realizar la carga de
             componentes por columna (es decir primero ingresar toda la primer
@@ -36,15 +36,11 @@ namespace Ejercicio1
                 Console.WriteLine();
             }
         }
-    }
-
-    class Program
-    {
         static void Main(string[] args)
         {
-            Matriz m = new Matriz();
-            m.Cargar();
-            m.Mostrar();
+            Program m = new Program();
+            p.Cargar();
+            p.Mostrar();
             Console.ReadKey();
         }
     }
