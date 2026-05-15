@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Ejercicio1
+namespace punto1
 {
     /*1. Sistema de Logística: Envíos por Sucursal
     Una empresa de correo tiene 3 sucursales principales. Cada sucursal procesa una
@@ -19,10 +19,10 @@ namespace Ejercicio1
      */
     class Program
     {
-        static string[] sucursales = new string[3];
-        static int[][] paquetes = new int[3][];
+        public string[] sucursales = new string[3];
+        public int[][] paquetes = new int[3][];
 
-        static void Cargar()
+        public void Cargar()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -42,7 +42,7 @@ namespace Ejercicio1
             }
         }
 
-        static void Mostrar()
+        public void Mostrar()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -57,7 +57,7 @@ namespace Ejercicio1
             }
         }
 
-        static void PesoTotal()
+        public void PesoTotal()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -72,7 +72,7 @@ namespace Ejercicio1
             }
         }
 
-        static void PaqueteMayor()
+        public void PaqueteMayor()
         {
             int mayor = paquetes[0][0];
             string sucursal = sucursales[0];
