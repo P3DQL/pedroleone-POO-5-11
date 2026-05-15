@@ -6,7 +6,7 @@ namespace Ejercicio3
         cuatro valores que se encuentran en los vértices de la misma (mat[0][0]
         etc.)
     */
-    class Matriz
+    class Program
     {
         private int[,] matriz;
         private int filas, columnas;
@@ -38,15 +38,12 @@ namespace Ejercicio3
             Console.WriteLine("Inferior izquierdo: " + matriz[filas - 1, 0]);
             Console.WriteLine("Inferior derecho: " + matriz[filas - 1, columnas - 1]);
         }
-    }
 
-    class Program
-    {
         static void Main(string[] args)
         {
-            Matriz m = new Matriz();
-            m.Cargar();
-            m.MostrarVertices();
+            Program p = new Program();
+            p.Cargar();
+            p.MostrarVertices();
             Console.ReadKey();
         }
     }
