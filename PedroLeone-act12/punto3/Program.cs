@@ -1,6 +1,6 @@
-﻿using System;
+using System;
 
-namespace Ejercicio3
+namespace punto3
 {
     class Program
     {
@@ -20,10 +20,10 @@ namespace Ejercicio3
             5. Determinar quién obtuvo el puntaje individual más alto en un solo plato (el
             valor máximo de la matriz).
         */
-        static string[] alumnos = new string[3];
-        static int[][] puntajes = new int[3][];
+        public string[] alumnos = new string[3];
+        public int[][] puntajes = new int[3][];
 
-        static void Cargar()
+        public void Cargar()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -51,7 +51,7 @@ namespace Ejercicio3
             }
         }
 
-        static void Mostrar()
+        public void Mostrar()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -66,7 +66,7 @@ namespace Ejercicio3
             }
         }
 
-        static void Promedios()
+        public void Promedios()
         {
             for (int i = 0; i < 3; i++)
             {
@@ -90,7 +90,7 @@ namespace Ejercicio3
             }
         }
 
-        static void MayorPuntaje()
+        public void MayorPuntaje()
         {
             int mayor = puntajes[0][0];
             string alumno = alumnos[0];
