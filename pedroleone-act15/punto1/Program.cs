@@ -29,7 +29,6 @@ namespace punto1
         severa (cualquier lectura individual que sea estrictamente mayor a 120
         pulsaciones), mostrando por consola su nombre y la lectura detectada.
     */
-    */
     class Paciente
     {
         private string Nombre;
