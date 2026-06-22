@@ -1,4 +1,5 @@
 ﻿using System;
+
 /*4. Armar tres clases: Animal, Mamífero y Perro.
 La clase Animal debe tener un atributo especie.
 La clase Mamífero, que hereda de Animal, debe tener un atributo
@@ -10,6 +11,7 @@ asignados previamente
 Crear un objeto de la clase Perro y verificar la ejecución en cadena de los
 constructores.
 */
+
 class Animal
 {
     protected string especie;
@@ -17,7 +19,7 @@ class Animal
     public Animal(string especie)
     {
         this.especie = especie;
-        Console.WriteLine("Constructor Animal");
+        Console.WriteLine("\nConstructor Animal");
         Console.WriteLine("Especie: " + especie);
     }
 }
@@ -52,6 +54,15 @@ class Program
 {
     static void Main()
     {
-        Perro perro = new Perro("Canino", "Carnívoro", "Firulais");
+        Console.Write("Ingrese especie: ");
+        string especie = Console.ReadLine();
+
+        Console.Write("Ingrese tipo de alimentación: ");
+        string alimentacion = Console.ReadLine();
+
+        Console.Write("Ingrese nombre del perro: ");
+        string nombre = Console.ReadLine();
+
+        Perro perro = new Perro(especie, alimentacion, nombre);
     }
 }
