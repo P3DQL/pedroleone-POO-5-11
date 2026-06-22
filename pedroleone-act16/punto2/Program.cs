@@ -1,4 +1,5 @@
 ﻿using System;
+
 /*2. Plantear una clase Producto y otra clase Inventario.
 La clase Producto debe tener como atributos privados el nombre, precio y
 stock. Definir propiedades para acceder a estos atributos, asegurando que el
@@ -8,6 +9,7 @@ método para mostrar todos los productos ordenados de menor a mayor en
 base al precio, además, mostrar el producto más caro y más barato del
 inventario.
 */
+
 class Producto
 {
     private string nombre;
@@ -47,16 +49,28 @@ class Inventario
 
     public Inventario()
     {
-        productos[0] = new Producto { Nombre = "Mouse", Precio = 15000, Stock = 10 };
-        productos[1] = new Producto { Nombre = "Teclado", Precio = 25000, Stock = 5 };
-        productos[2] = new Producto { Nombre = "Monitor", Precio = 120000, Stock = 2 };
+        for (int i = 0; i < productos.Length; i++)
+        {
+            productos[i] = new Producto();
+
+            Console.WriteLine("\nProducto " + (i + 1));
+
+            Console.Write("Nombre: ");
+            productos[i].Nombre = Console.ReadLine();
+
+            Console.Write("Precio: ");
+            productos[i].Precio = double.Parse(Console.ReadLine());
+
+            Console.Write("Stock: ");
+            productos[i].Stock = int.Parse(Console.ReadLine());
+        }
     }
 
     public void MostrarProductos()
     {
         Array.Sort(productos, (a, b) => a.Precio.CompareTo(b.Precio));
 
-        Console.WriteLine("Productos ordenados por precio:");
+        Console.WriteLine("\nProductos ordenados por precio:");
 
         foreach (Producto p in productos)
         {
