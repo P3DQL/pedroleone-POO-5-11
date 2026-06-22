@@ -1,4 +1,5 @@
 ﻿using System;
+
 /*3. Crear una clase base Vehículo que contenga atributos marca y
 velocidadMaxima.
 Definir dos clases derivadas: Auto y Moto, que hereden de Vehículo. Cada
@@ -7,6 +8,7 @@ mediante la palabra clave base, y un atributo propio (cantidadPuertas en
 Auto, cilindrada en Moto).
 Crear un objeto de cada clase y mostrar todos sus datos por consola.
 */
+
 class Vehiculo
 {
     public string Marca { get; set; }
@@ -31,7 +33,7 @@ class Auto : Vehiculo
 
     public void Mostrar()
     {
-        Console.WriteLine("AUTO");
+        Console.WriteLine("\nAUTO");
         Console.WriteLine("Marca: " + Marca);
         Console.WriteLine("Velocidad Máxima: " + VelocidadMaxima);
         Console.WriteLine("Puertas: " + CantidadPuertas);
@@ -50,7 +52,7 @@ class Moto : Vehiculo
 
     public void Mostrar()
     {
-        Console.WriteLine("MOTO");
+        Console.WriteLine("\nMOTO");
         Console.WriteLine("Marca: " + Marca);
         Console.WriteLine("Velocidad Máxima: " + VelocidadMaxima);
         Console.WriteLine("Cilindrada: " + Cilindrada + "cc");
@@ -61,13 +63,33 @@ class Program
 {
     static void Main()
     {
-        Auto auto = new Auto("Toyota", 220, 4);
-        Moto moto = new Moto("Honda", 180, 250);
+        Console.WriteLine("DATOS DEL AUTO");
+
+        Console.Write("Marca: ");
+        string marcaAuto = Console.ReadLine();
+
+        Console.Write("Velocidad máxima: ");
+        int velocidadAuto = int.Parse(Console.ReadLine());
+
+        Console.Write("Cantidad de puertas: ");
+        int puertas = int.Parse(Console.ReadLine());
+
+        Auto auto = new Auto(marcaAuto, velocidadAuto, puertas);
+
+        Console.WriteLine("\nDATOS DE LA MOTO");
+
+        Console.Write("Marca: ");
+        string marcaMoto = Console.ReadLine();
+
+        Console.Write("Velocidad máxima: ");
+        int velocidadMoto = int.Parse(Console.ReadLine());
+
+        Console.Write("Cilindrada: ");
+        int cilindrada = int.Parse(Console.ReadLine());
+
+        Moto moto = new Moto(marcaMoto, velocidadMoto, cilindrada);
 
         auto.Mostrar();
-
-        Console.WriteLine();
-
         moto.Mostrar();
     }
 }
