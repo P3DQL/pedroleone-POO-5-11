@@ -42,16 +42,18 @@ class Paquete
     public void Mostrar()
     {
         Console.WriteLine(
-            "Código: " + codigo +
-            " | Peso: " + peso +
-            " kg | Destino: " + destino
-        );
+            "Código: " + codigo);
+        Console.WriteLine(
+            "Peso: " + peso +
+            " kg");
+        Console.WriteLine(
+            "Destino: " + destino);
     }
 }
 
 class Despachador
 {
-    public Paquete[] paquetes =
+    private Paquete[] paquetes =
         new Paquete[5];
 
     public void RegistrarPaquete(
@@ -60,35 +62,80 @@ class Despachador
     {
         paquetes[posicion] = p;
     }
+
+    public void MostrarPaquetes()
+    {
+        foreach (Paquete p in paquetes)
+        {
+            p.Mostrar();
+
+            Console.WriteLine();
+        }
+    }
+
+    public int PaquetesPesados()
+    {
+        int contador = 0;
+
+        foreach (Paquete p in paquetes)
+        {
+            if (p.Peso > 10)
+                contador++;
+        }
+
+        return contador;
+    }
+
+    public int PaquetesNacionales()
+    {
+        int contador = 0;
+
+        foreach (Paquete p in paquetes)
+        {
+            if (p.Destino ==
+                "Argentina")
+            {
+                contador++;
+            }
+        }
+
+        return contador;
+    }
 }
 
 class Program
 {
     static void Main()
     {
-        Despachador despachador =
+        Despachador d =
             new Despachador();
 
         for (int i = 0; i < 5; i++)
         {
-            Paquete p = new Paquete();
+            Paquete p =
+                new Paquete();
 
             Console.WriteLine(
-                "PAQUETE " + (i + 1));
+                "PAQUETE " +
+                (i + 1));
 
-            Console.Write("Código: ");
+            Console.Write(
+                "Código: ");
             p.Codigo =
                 Console.ReadLine();
 
-            Console.Write("Peso: ");
+            Console.Write(
+                "Peso: ");
             p.Peso =
-                double.Parse(Console.ReadLine());
+                double.Parse(
+                    Console.ReadLine());
 
-            Console.Write("Destino: ");
+            Console.Write(
+                "Destino: ");
             p.Destino =
                 Console.ReadLine();
 
-            despachador.RegistrarPaquete(
+            d.RegistrarPaquete(
                 i, p);
 
             Console.WriteLine();
@@ -97,33 +144,14 @@ class Program
         Console.WriteLine(
             "PAQUETES REGISTRADOS");
 
-        foreach (Paquete p in
-                 despachador.paquetes)
-        {
-            p.Mostrar();
-        }
-
-        int mayores10 = 0;
-        int nacionales = 0;
-
-        foreach (Paquete p in
-                 despachador.paquetes)
-        {
-            if (p.Peso > 10)
-                mayores10++;
-
-            if (p.Destino ==
-                "Argentina")
-                nacionales++;
-        }
-
-        Console.WriteLine();
-        Console.WriteLine(
-            "Paquetes mayores a 10 kg: "
-            + mayores10);
+        d.MostrarPaquetes();
 
         Console.WriteLine(
-            "Paquetes nacionales: "
-            + nacionales);
+            "Mayores a 10 kg: " +
+            d.PaquetesPesados());
+
+        Console.WriteLine(
+            "Destinos nacionales: " +
+            d.PaquetesNacionales());
     }
 }
