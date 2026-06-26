@@ -25,20 +25,15 @@ class Zona
     public int TotalVisitas
     {
         get { return totalVisitas; }
-        set
-        {
-            if (value >= 0)
-                totalVisitas = value;
-        }
+        set { totalVisitas = value; }
     }
 
     public void Mostrar()
     {
         Console.WriteLine(
             nombre +
-            " | Total visitas: " +
-            totalVisitas
-        );
+            " - Total visitas: " +
+            totalVisitas);
     }
 }
 
@@ -99,7 +94,8 @@ class Program
             for (int j = 0; j < 4; j++)
             {
                 Console.Write(
-                    visitas[i, j] + "\t");
+                    visitas[i, j] +
+                    "\t");
             }
 
             Console.WriteLine(
@@ -111,15 +107,16 @@ class Program
             zonasVisitadas[i].Nombre =
                 nombres[i];
 
-            zonasVisitadas[i].TotalVisitas =
+            zonasVisitadas[i]
+                .TotalVisitas =
                 totales[i];
         }
 
         Zona mayor =
             zonasVisitadas[0];
 
-        foreach (Zona z in
-                 zonasVisitadas)
+        foreach (Zona z
+                 in zonasVisitadas)
         {
             if (z.TotalVisitas >
                 mayor.TotalVisitas)
@@ -130,7 +127,7 @@ class Program
 
         Console.WriteLine();
         Console.WriteLine(
-            "Zona más visitada:");
+            "ZONA MÁS VISITADA");
 
         mayor.Mostrar();
     }
