@@ -43,7 +43,18 @@ class Vuelo
     public Vuelo()
     {
         Console.WriteLine(
-            "Constructor Vuelo ejecutado");
+            "Constructor de Vuelo");
+    }
+
+    public void Mostrar()
+    {
+        Console.WriteLine(
+            "Vuelo: " + numeroVuelo);
+        Console.WriteLine(
+            "Destino: " + destino);
+        Console.WriteLine(
+            "Duración: " +
+            duracionHoras + " hs");
     }
 }
 
@@ -60,17 +71,16 @@ class VueloInternacional : Vuelo
     public VueloInternacional()
     {
         Console.WriteLine(
-            "Constructor VueloInternacional ejecutado");
+            "Constructor de VueloInternacional");
     }
 
-    public void Mostrar()
+    public void MostrarVuelo()
     {
+        Mostrar();
+
         Console.WriteLine(
-            "Vuelo: " + NumeroVuelo +
-            " | Destino: " + Destino +
-            " | Duración: " + DuracionHoras +
-            " hs | País: " + PaisDestino
-        );
+            "País destino: " +
+            paisDestino);
     }
 }
 
@@ -89,19 +99,24 @@ class Program
             Console.WriteLine(
                 "VUELO " + (i + 1));
 
-            Console.Write("Número vuelo: ");
+            Console.Write(
+                "Número de vuelo: ");
             vuelos[i].NumeroVuelo =
                 Console.ReadLine();
 
-            Console.Write("Destino: ");
+            Console.Write(
+                "Destino: ");
             vuelos[i].Destino =
                 Console.ReadLine();
 
-            Console.Write("Duración: ");
+            Console.Write(
+                "Duración: ");
             vuelos[i].DuracionHoras =
-                double.Parse(Console.ReadLine());
+                double.Parse(
+                    Console.ReadLine());
 
-            Console.Write("País destino: ");
+            Console.Write(
+                "País destino: ");
             vuelos[i].PaisDestino =
                 Console.ReadLine();
 
@@ -111,15 +126,19 @@ class Program
         Console.WriteLine(
             "VUELOS REGISTRADOS");
 
-        foreach (VueloInternacional v in vuelos)
+        foreach (VueloInternacional v
+                 in vuelos)
         {
-            v.Mostrar();
+            v.MostrarVuelo();
+
+            Console.WriteLine();
         }
 
         VueloInternacional mayor =
             vuelos[0];
 
-        foreach (VueloInternacional v in vuelos)
+        foreach (VueloInternacional v
+                 in vuelos)
         {
             if (v.DuracionHoras >
                 mayor.DuracionHoras)
@@ -128,10 +147,9 @@ class Program
             }
         }
 
-        Console.WriteLine();
         Console.WriteLine(
-            "Vuelo con mayor duración:");
+            "VUELO CON MAYOR DURACIÓN");
 
-        mayor.Mostrar();
+        mayor.MostrarVuelo();
     }
 }
